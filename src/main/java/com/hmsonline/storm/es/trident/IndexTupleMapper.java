@@ -13,7 +13,8 @@ public interface IndexTupleMapper extends Serializable {
 
     String toId(TridentTuple tuple);
 
-    Map<String, Object> toDocument(TridentTuple tuple);
+    String toDocument(TridentTuple tuple);
+//    Map<String, Object> toDocument(TridentTuple tuple);
 
     String toParentId(TridentTuple tuple);
 
