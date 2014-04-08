@@ -16,6 +16,7 @@ public class NodeClientFactory implements ClientFactory {
     public Client makeClient(Map conf) {
         String clusterName = (String)conf.get(CLUSTER_NAME);
         LOG.info("Attaching node client to cluster: '{}'", clusterName);
+        //http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-node.html
         Node node = nodeBuilder().clusterName(clusterName).client(true).data(false).node();
         return node.client();
     }
