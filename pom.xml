@@ -43,7 +43,7 @@
 
 	<properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<storm.version>0.9.0-rc2</storm.version>
+		<storm.version>0.9.0.1</storm.version>
 	</properties>
 
 	<dependencies>

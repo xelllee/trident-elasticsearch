@@ -75,8 +75,8 @@ public class IndexState implements State {
             if (bulkResponse.hasFailures()) {
                 this.exceptionHandler.onBulkRequestFailure(bulkResponse);
             }
-            if (batchCount % 100 == 0) {
-                LOG.info(count + " rows haven sent to ES in " + batchCount + " batches current: txId is " + currentTxid);
+            if (currentTxid % 100 == 0) {
+                LOG.info(count + " rows have been sent to ElasticSearch in " + batchCount + " batches current: txId is " + currentTxid + " with " + tridentTuples.size() + " tuples.");
             }
 
         } catch (Exception e) {
